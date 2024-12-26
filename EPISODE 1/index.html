@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hello world from html</h1>
+    <div id="root">
+
+    </div>
+    <div id="root2">
+
+    </div>
+    <div id="root3">
+
+    </div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        const header = React.createElement("h1", {}, "hello world from react")
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(header)
+    </script>
+
+    <!-- creating nested elements with react - -->
+    <!-- let us now create a parent div and inside that there are two child divs that print child 1
+    and child 2 -->
+
+    <script>
+        const header2 = React.createElement("div", { id: "parent" },
+        // array of children, to create more than one child.
+            [
+                React.createElement("div", { id: "child1" }, "child1"),
+                React.createElement("div", { id: "child1" }, "child2")
+            ]
+        )
+        const root2 = ReactDOM.createRoot(document.getElementById("root2"))
+        root2.render(header2)
+    </script>
+
+    <!-- lastly we would like to create a parent that has two children who again have one-one child. -->
+
+    <script>
+        const header3 = React.createElement("div",{id:"parent"},
+        [React.createElement("div",{id:"child1"},React.createElement("div",{id:"grandChild1"},"i am granchild1")),
+        React.createElement("div",{id:"child2"},React.createElement("div",{id:"grandChild2"},"i am granchild2"))])   
+        const root3 = ReactDOM.createRoot(document.getElementById("root3"))
+        root3.render(header3)
+        </script>
+
+
+</body>
+
+</html>
