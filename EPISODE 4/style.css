@@ -1,0 +1,62 @@
+.logo{
+    height: 100px;
+}
+#header{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    background-color:lightpink;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.logo{
+    background:none;
+}
+.nav-items {
+    display: flex;
+   
+    list-style-type: none; 
+}
+
+.nav-items > li{
+    margin:10px;
+    padding:10px;
+    color:darkslategrey;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+.res-cards{
+    height: 300px;
+    width: 200px;
+    margin:20px;
+    background-color:honeydew;
+   
+}
+
+.res-cards:hover{
+    border: 2px solid black;
+    cursor:pointer;
+}
+
+.res-logo{
+    height: 150px;
+    width: 200px;
+    border: 2px solid black;
+}
+
+.search-bar{
+    padding:20px;
+}
+
+.img-1{
+    height: 100px;
+    height: 150px;
+    width: 200px;
+}
+.res-container{
+    display: flex;
+    padding:20px;
+    margin:20px;
+    flex-wrap: wrap;
+}
